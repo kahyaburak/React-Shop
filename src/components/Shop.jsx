@@ -1,7 +1,7 @@
 import {DUMMY_PRODUCTS} from '../dummy-products.js';
 import Product from './Product.jsx';
 
-export default function Shop({addItemToCart}) {
+export default function Shop() {
   return (
     <section id="shop">
       <h2>Elegant Clothing For Everyone</h2>
@@ -9,7 +9,7 @@ export default function Shop({addItemToCart}) {
       <ul id="products">
         {DUMMY_PRODUCTS.map((product) => (
           <li key={product.id}>
-            <Product {...product} onAddToCart={addItemToCart} />
+            <Product {...product} />
           </li>
         ))}
       </ul>
